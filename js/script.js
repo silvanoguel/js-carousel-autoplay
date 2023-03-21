@@ -59,3 +59,11 @@ prevBtn.addEventListener("click", function() {
     }
 })
 
+const autoplay = setInterval (function(){
+    itemsArray[activeItemIndex].classList.remove('active');
+    activeItemIndex++;
+    if (activeItemIndex === itemsArray.length) {
+        activeItemIndex = 0;
+    }
+    itemsArray[activeItemIndex].classList.add('active')
+}, 3000);
